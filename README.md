@@ -1,4 +1,4 @@
-# EstrategiasInversion_Clase01_MatApl# Actividad 6: Estrategias de inversión
+# Actividad 6: Estrategias de inversión
 
 ### Operaciones con vectores y matrices — Álgebra Lineal
 
@@ -33,17 +33,17 @@ $$R[t] = \frac{P[t]}{P[t-1]} - 1$$
 
 **Buy and Hold:** las unidades compradas el día 0 se mantienen fijas. La riqueza en cualquier día es el producto (broadcasting) entre la matriz de precios `P` y el vector de unidades compradas, sumado por fila:
 
-$$\text{wealth}_{BH}[t] = \sum_{i=1}^{6} P[t, i] \cdot n_i$$
+$$W_{BH}[t] = \sum_{i=1}^{6} P[t, i] \cdot n_i$$
 
 **Rebalanceo Diario:** si cada día se reparte el capital en partes iguales, el retorno del portafolio es el promedio simple de los 6 retornos individuales — un producto matriz-vector:
 
-$$\text{retorno\_portafolio} = R \cdot w \quad \text{con} \quad w = \left[\tfrac{1}{6}, \dots, \tfrac{1}{6}\right]$$
+$$r_{port}[t] = R[t] \cdot w \quad \text{con} \quad w = \left[\tfrac{1}{6}, \dots, \tfrac{1}{6}\right]$$
 
-$$\text{wealth}_{Rebal}[t] = \text{wealth}_{Rebal}[t-1] \cdot (1 + \text{retorno\_portafolio}[t-1])$$
+$$W_{Rebal}[t] = W_{Rebal}[t-1] \cdot (1 + r_{port}[t-1])$$
 
 **S&P500 (referencia):**
 
-$$\text{wealth}_{SP500}[t] = C \cdot \frac{P_{sp500}[t]}{P_{sp500}[0]}$$
+$$W_{SP500}[t] = C \cdot \frac{P_{sp500}[t]}{P_{sp500}[0]}$$
 
 ## Requisitos
 
